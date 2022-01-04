@@ -1,0 +1,93 @@
+//-----------------------------------------
+// Message numero : 1
+//-----------------------------------------
+GET /robot.html HTTP/1.1
+Host: 192.168.194.189:2222
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Linux; Android 11; GM1913 Build/RKQ1.201022.002) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.104 Mobile Safari/537.36 OPX/1.4
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+X-Requested-With: com.opera.gx
+Accept-Encoding: gzip, deflate
+Accept-Language: fr-FR,fr;q=0.9,en-GB;q=0.8,en-US;q=0.7,en;q=0.6
+
+//-----------------------------------------
+
+
+
+//-----------------------------------------
+// Message numero : 2
+//-----------------------------------------
+GET /favicon.ico HTTP/1.1
+Host: 192.168.194.189:2222
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Linux; Android 11; GM1913 Build/RKQ1.201022.002) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.104 Mobile Safari/537.36 OPX/1.4
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+X-Requested-With: com.opera.gx
+Referer: http://192.168.194.189:2222/robot.html
+Accept-Encoding: gzip, deflate
+Accept-Language: fr-FR,fr;q=0.9,en-GB;q=0.8,en-US;q=0.7,en;q=0.6
+
+//-----------------------------------------
+
+
+
+//-----------------------------------------
+// Message numero : 3
+//-----------------------------------------
+HEAD /robot.html HTTP/1.1
+Origin: http://192.168.194.189:2222
+User-Agent: Mozilla/5.0 (Linux; Android 11; GM1913 Build/RKQ1.201022.002) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.104 Mobile Safari/537.36 OPX/1.4
+Referer: http://192.168.194.189:2222/robot.html
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Upgrade-Insecure-Requests: 1
+Content-Type: text/plain
+Host: 192.168.194.189:2222
+Connection: Keep-Alive
+Accept-Encoding: gzip
+
+//-----------------------------------------
+
+
+
+//-----------------------------------------
+// Message numero : 4
+//-----------------------------------------
+POST /robot.html HTTP/1.1
+Host: 192.168.194.189:2222
+Connection: keep-alive
+Content-Length: 28
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+Origin: http://192.168.194.189:2222
+Content-Type: text/plain
+User-Agent: Mozilla/5.0 (Linux; Android 11; GM1913 Build/RKQ1.201022.002) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.104 Mobile Safari/537.36 OPX/1.4
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+X-Requested-With: com.opera.gx
+Referer: http://192.168.194.189:2222/robot.html
+Accept-Encoding: gzip, deflate
+Accept-Language: fr-FR,fr;q=0.9,en-GB;q=0.8,en-US;q=0.7,en;q=0.6
+
+champ_texte=79
+bt1=bout_1
+//-----------------------------------------
+
+
+
+//-----------------------------------------
+// Message numero : 5
+//-----------------------------------------
+GET /favicon.ico HTTP/1.1
+Host: 192.168.194.189:2222
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Linux; Android 11; GM1913 Build/RKQ1.201022.002) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.104 Mobile Safari/537.36 OPX/1.4
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+X-Requested-With: com.opera.gx
+Referer: http://192.168.194.189:2222/robot.html
+Accept-Encoding: gzip, deflate
+Accept-Language: fr-FR,fr;q=0.9,en-GB;q=0.8,en-US;q=0.7,en;q=0.6
+
+//-----------------------------------------
+
+
+
