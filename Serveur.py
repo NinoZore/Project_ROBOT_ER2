@@ -7,6 +7,7 @@ addrD = 0x27 # addr de l'arduino(i2c)
 addrG = 0x25
 arduinobus = smbus.SMBus(1) # creation du bus i2c   
 recu = 0
+CODE = 0
 
 Avance = 0
 Recule = 0
@@ -32,13 +33,13 @@ def bouton():
     if bouton_appuyer == "AVANCER":
         #arduinobus.write_byte(addrD, 81)
         #arduinobus.write_byte(addrG, 81)
-        CODE = 81
+        BOUTON = 81
         print("avance")   
 
     if bouton_appuyer == "RECULER":
         #arduinobus.write_byte(addrD, 79)
         #arduinobus.write_byte(addrG, 79)
-        CODE = 79
+        BOUTON = 79
         print("recule")     
 
     if bouton_appuyer == "TOURNER_GAUCHE":
@@ -60,6 +61,7 @@ def I2C_CODE():
 def WEB():
 
     while True:
+        CODE = bouton
         #arduinobus.write_byte(addr, 101)
         #time.sleep(0.5)
         #battery = arduinobus.read_byte(addr)
