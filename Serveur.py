@@ -8,7 +8,6 @@ addrG = 0x25
 arduinobus = smbus.SMBus(1) # creation du bus i2c   
 recu = 0
 CODE_HTML = "en attente"
-bouton = 0
 
 Avance = 0
 Recule = 0
@@ -61,15 +60,10 @@ def I2C_CODE():
     return jsonify(CODE_JS = CODE_HTML)
 
 def WEB():
+    test = 0 
     while True:
-        if Avance == 1 :
-             CODE_HTML = "I2C_Gauche = 81 et I2C_DROITE = 81"
-        if Recule == 1 :
-            CODE_HTML = "I2C_Gauche = 79 et I2C_DROITE = 79"
-        if Tourne_Droite == 1 :
-            CODE_HTML = "I2C_Gauche = 81 et I2C_DROITE = 79"    
-        if Tourne_Gauche == 1 : 
-            CODE_HTML = "I2C_Gauche = 79 et I2C_DROITE = 81"            
+        CODE_HTML = test
+        test =+ 1        
         #arduinobus.write_byte(addr, 101)
         #time.sleep(0.5)
         #battery = arduinobus.read_byte(addr)
