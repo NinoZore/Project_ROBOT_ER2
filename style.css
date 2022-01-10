@@ -36,3 +36,63 @@ img#video {
     min-width: 100%; min-height: 100%;
     width: auto; height: auto; z-index: -100;
     }
+/*robot.html*/
+button{
+    background-color: white;
+}
+.AVANCE{
+    background-image: url("bouton_avance.png");
+    background-size: 100%;
+    width: 300px;
+    height: 300px;
+        
+}
+.RECULE{
+    
+    background-image: url("bouton_recule.png");
+    background-size: 100%;
+    width: 300px;
+    height: 300px;
+    
+}
+.TOURNEGAUCHE{
+    align-items: right;
+    background-image: url("bouton_tournegauche.png");
+    background-size: 100%;
+    width: 300px;
+    height: 300px;
+    
+} 
+.TOURNEDROITE{
+    background-image: url("bouton_tournedroite.png");
+    background-size: 100%;
+    width: 300px;
+    height: 300px;
+    
+}
+.feed_video{
+display: flex; 
+align-items: center;   
+background-color: green;
+width: 100%;
+height: auto;    
+}
+.CONTROLEUR{
+    height: 600px;
+    background-color: pink;
+    display: flex;
+    flex-direction:row; 
+}
+.SENS{
+    width: 300px;
+    background-color: blue;
+    left: 0%;
+    display: flex;
+    flex-direction:column; 
+}
+.DIRECTION{
+    background-color: chartreuse;
+    right: 0%;
+    display: flex;
+    flex-direction:column; 
+}

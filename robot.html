@@ -2,7 +2,8 @@
 
 <html>
 	<head> 
-		<meta Content-Type: text/html; charset="utf-8" /> 
+		<meta Content-Type: text/html; charset="utf-8" />
+		<link rel="stylesheet" href="style.css" />  
 		<title>Robot</title> 
 	</head>
 	
@@ -11,10 +12,20 @@
 			<h1> Communication avec le robot</h1> 			<!-- Commentaire entre ces balises -->
 			<label for="message">Enter le message</label>
 			<INPUT type="text" name="champ_texte" id="message" size="10" maxlength="20">
+
 			<br>
-			<button style="padding: 0 20px;line-height: 2.5;" type="submit" value="bout_1" name="bt1">bouton 1</button>
 			<br>
-			<button style="padding: 0 20px;line-height: 2.5;" type="submit" value="bout_2" name="bt2">bouton 2</button>
+			<div class="CONTROLEUR"> 
+				<div class="SENS"> 
+					<button class="AVANCE" type="submit" value="bout_1" name="bt1"></button>
+					<button class="RECULE" type="submit" value="bout_2" name="bt2"></button>
+				</div> 
+				<img class="feed_video" src="http://raspberrypi.local:8080/?action=stream" />
+				<div class="DIRECTION"> 
+					<button class="TOURNEGAUCHE" type="submit" value="bout_2" name="bt3"></button>
+					<button class="TOURNEDROITE" type="submit" value="bout_2" name="bt4"></button>
+				</div> 
+			</div> 
 		</FORM> 
 	</body>
 </html>
