@@ -38,6 +38,13 @@ int main()
 	char fichier_html[1500];
 	char version_http[100];
 	
+	char test[]="journal.txt";
+    FILE *Fichier;
+  
+    char find[100];
+    char CODE81[] = "81";
+    char CODE80[] = "80";
+    char CODE79[] = "79";
 	
 	
 		
@@ -169,6 +176,35 @@ int main()
 			printf("\n Fin de communication avec la connexion numero : %d\n", nb_connexion);
 			printf("----------------------------------------------------------------\n");
 		}
+		Fichier = fopen(journal, "r");
+	    if (!Fichier){
+         printf("\aERREUR: Impossible d'ouvrir le fichier: %s.\n", test);
+        }
+    
+		while (fgets(find,100,Fichier) != NULL){
+        
+        if (strstr(find, CODE81) != NULL){
+        printf("81 trouvé");
+
+        }
+        if (strstr(find, CODE80) != NULL){
+        printf("80 trouvé");
+
+        }
+        if (strstr(find, CODE79) != NULL){
+        printf("79 trouvé");
+
+        }
+
+
+      }
+    fclose(Fichier);
+	remove(JOURNAL);
+	fd = open(JOURNAL, O_RDWR | O_CREAT);
+	close(fd);
+	
+	// Change les droits d'acces au fichier Journal
+	chmod(JOURNAL, S_IRUSR | S_IWUSR);
 	}
 	
 	close(sock_ecoute);  	// jamais atteint !!!!
