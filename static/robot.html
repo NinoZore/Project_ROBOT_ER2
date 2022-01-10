@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+	<head> 
+		<meta Content-Type: text/html; charset="utf-8" />
+		<link rel="stylesheet" href="style.css" />  
+		<title>Robot</title> 
+	</head>
+	
+	<body>
+		<FORM method="post" action="/robot.html" enctype="text/plain"> 
+			<div class="entete"> 
+			<h1> Communication avec le robot</h1> 			<!-- Commentaire entre ces balises -->
+			<label for="message">Enter le message</label>
+			<INPUT type="text" name="champ_texte" id="message" size="10" maxlength="20">
+			<a id ="CODE_I2C">	
+			</div>
+			<br>
+			<br>
+			<div class="CONTROLEUR"> 
+				<div class="SENS"> 
+					<button class="AVANCE" onclick ="bouton_parametre('AVANCER')"></button>
+					<button class="RECULE" onclick ="bouton_parametre('RECULER')"></button>
+				</div> 
+				<img class="feed_video" src="http://raspberrypi.local:8080/?action=stream" />
+				<div class="DIRECTION"> 
+					<button class="TOURNEGAUCHE" onclick ="bouton_parametre('TOURNER GAUCHE')"></button>
+					<button class="TOURNEDROITE" onclick ="bouton_parametre('TOURNER DROITE')"></button>
+				</div> 
+			</div> 
+		</FORM> 
+	</body>
+</html>
+
+
+
