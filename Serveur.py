@@ -2,7 +2,7 @@ from flask import Flask, render_template, jsonify, request
 import smbus2 as smbus
 import time, threading
 
-CODE = 0
+
 addrD = 0x27 # addr de l'arduino(i2c)
 addrG = 0x25
 arduinobus = smbus.SMBus(1) # creation du bus i2c   
@@ -64,7 +64,6 @@ def I2C_CODE():
 
 def WEB():
     global CODE
-    global bouton
     while True:
         print(bouton)
         print(CODE)
