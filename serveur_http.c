@@ -2,6 +2,7 @@
 #define JOURNAL         		"journal.txt"
 #define FICHIER_INDEX_HTML		"index.html"
 #define FICHIER_ROBOT_HTML		"robot.html"
+#define FICHIER_STYLE_CSS       "style.css"
 
 #include <stdlib.h> 
 #include <stdio.h> 
@@ -222,6 +223,7 @@ int Recherche_Fichier_Html(const char *page, char *fichier_html)
 	bzero(fichier_html, 1500);
 	
 	stpcpy(fichier_html, FICHIER_INDEX_HTML);		// Page par defaut
+	stpcpy(fichier_html, FICHIER_STYLE_CSS);
 	
 	if(strcmp(page, "robot.html") == 0)		stpcpy(fichier_html, FICHIER_ROBOT_HTML);
 	
