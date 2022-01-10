@@ -7,7 +7,7 @@ addrD = 0x27 # addr de l'arduino(i2c)
 addrG = 0x25
 arduinobus = smbus.SMBus(1) # creation du bus i2c   
 recu = 0
-CODE = "en attente"
+CODE_HTML = "en attente"
 bouton = 0
 
 Avance = 0
@@ -59,15 +59,14 @@ def bouton():
 
 @app.route("/code")#si on va sur /message on retourne le json { "message": "nouvelle valeur"}
 def I2C_CODE():
-    global CODE #variable python pour changer 
-    return jsonify(CODE_JS = CODE)
+    global CODE_HTML #variable python pour changer 
+    return jsonify(CODE_JS = CODE_HTML)
 
 def WEB():
-    global CODE
     while True:
         print(bouton)
-        print(CODE)
-        CODE = bouton
+        CODE_HTML = bouton
+        print(CODE_HTML)        
         #arduinobus.write_byte(addr, 101)
         #time.sleep(0.5)
         #battery = arduinobus.read_byte(addr)
