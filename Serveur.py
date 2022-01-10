@@ -9,6 +9,7 @@ arduinobus = smbus.SMBus(1) # creation du bus i2c
 recu = 0
 CODE_HTML = 0
 
+
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -45,10 +46,11 @@ def I2C_CODE():
     return jsonify(CODE_JS = CODE_HTML)
 
 def WEB():
+    global CODE_HTML
     test = 0 
     while True:
         CODE_HTML = test
-        test =+ 1        
+        test += 1        
         #arduinobus.write_byte(addr, 101)
         #time.sleep(0.5)
         #battery = arduinobus.read_byte(addr)
