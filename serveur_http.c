@@ -176,7 +176,7 @@ int main()
 			printf("\n Fin de communication avec la connexion numero : %d\n", nb_connexion);
 			printf("----------------------------------------------------------------\n");
 		}
-		Fichier = fopen(journal, "r");
+		Fichier = fopen("journal.txt", "r");
 	    if (!Fichier){
          printf("\aERREUR: Impossible d'ouvrir le fichier: %s.\n", test);
         }
