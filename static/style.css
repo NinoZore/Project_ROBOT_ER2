@@ -1,5 +1,6 @@
 html{
     background-image: "static/wallpaper.gif";
+    background-image: "wallpaper.gif";
 }
 .Bouton {/* MENU */
     font-size: 400%;
@@ -37,7 +38,7 @@ img#video {
     width: auto; height: auto; z-index: -100;
     }
 /*robot.html*/
-button{
+oui{
     background-color: white;
 }
 .AVANCE{
