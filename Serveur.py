@@ -8,6 +8,7 @@ addrG = 0x25
 arduinobus = smbus.SMBus(1) # creation du bus i2c   
 recu = 0
 CODE = "en attente"
+bouton = 0
 
 Avance = 0
 Recule = 0
@@ -27,31 +28,32 @@ def bouton():
     global Tourne_Gauche
     global Tourne_Droite
     global bouton_appuyer
+    global bouton
     print(request.get_json())
         
     bouton_appuyer = request.get_json()
     if bouton_appuyer == "AVANCER":
         #arduinobus.write_byte(addrD, 81)
         #arduinobus.write_byte(addrG, 81)
-        CODE = "I2C_Gauche = 81 et I2C_DROITE = 81"
+        bouton = "I2C_Gauche = 81 et I2C_DROITE = 81"
         print("avance")   
 
     if bouton_appuyer == "RECULER":
         #arduinobus.write_byte(addrD, 79)
         #arduinobus.write_byte(addrG, 79)
-        CODE = "I2C_Gauche = 79 et I2C_DROITE = 79"
+        bouton = "I2C_Gauche = 79 et I2C_DROITE = 79"
         print("recule")     
 
-    if bouton_appuyer == "TOURNER_GAUCHE":
+    if bouton_appuyer == "TOURNER GAUCHE":
         #arduinobus.write_byte(addrD, 81)
         #arduinobus.write_byte(addrG, 79)
-        CODE = "I2C_Gauche = 79 et I2C_DROITE = 81"
+        bouton = "I2C_Gauche = 79 et I2C_DROITE = 81"
         print("tourne gauche")  
           
     if bouton_appuyer == "TOURNER DROITE":
         #arduinobus.write_byte(addrD, 79)
         #arduinobus.write_byte(addrG, 81)
-        CODE = "I2C_Gauche = 81 et I2C_DROITE = 79"
+        bouton = "I2C_Gauche = 81 et I2C_DROITE = 79"
         print("tourne droite")
     return "JE SAIS PAS QUOI RETURN MDR"    
 
@@ -63,6 +65,7 @@ def I2C_CODE():
 def WEB():
 
     while True:
+        CODE = bouton
         #arduinobus.write_byte(addr, 101)
         #time.sleep(0.5)
         #battery = arduinobus.read_byte(addr)
