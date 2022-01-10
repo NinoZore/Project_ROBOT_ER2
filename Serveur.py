@@ -2,14 +2,12 @@ from flask import Flask, render_template, jsonify, request
 import smbus2 as smbus
 import time, threading
 
-
+app = Flask(__name__, template_folder = "static/")
 addrD = 0x27 # addr de l'arduino(i2c)
 addrG = 0x25
 arduinobus = smbus.SMBus(1) # creation du bus i2c   
 recu = 0
 CODE_HTML = 0
-
-app = Flask(__name__, template_folder = "static/")
 
 @app.route("/")
 def index():
