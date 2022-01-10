@@ -1,4 +1,4 @@
-function CODE(){
+function CODEI2C(){
     
     fetch("/code")//on fait une requete a /message
     .then( data => {console.log(data);return data.json()})//on prend ce que ca nous renvoie et on retourne le json
@@ -20,4 +20,4 @@ function bouton_parametre(variable){
 //oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 //oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
-setInterval(CODE, 1000)
+setInterval(CODEI2C, 1000)
