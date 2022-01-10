@@ -55,7 +55,7 @@ def bouton():
         #arduinobus.write_byte(addrG, 81)
         bouton = "I2C_Gauche = 81 et I2C_DROITE = 79"
         print("tourne droite")
- 
+    return None
 
 @app.route("/code")#si on va sur /message on retourne le json { "message": "nouvelle valeur"}
 def I2C_CODE():
