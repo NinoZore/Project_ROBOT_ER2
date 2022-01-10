@@ -7,12 +7,7 @@ addrD = 0x27 # addr de l'arduino(i2c)
 addrG = 0x25
 arduinobus = smbus.SMBus(1) # creation du bus i2c   
 recu = 0
-CODE_HTML = "en attente"
-
-Avance = 0
-Recule = 0
-Tourne_Gauche = 0
-Tourne_Droite = 0
+CODE_HTML = 0
 
 app = Flask(__name__, template_folder = "static/")
 
@@ -22,33 +17,25 @@ def index():
 
 @app.route("/button",methods = ["POST"])#si on va sur /button on
 def bouton():
-    global Avance
-    global Recule
-    global Tourne_Gauche
-    global Tourne_Droite
     print(request.get_json())
         
     bouton_appuyer = request.get_json()
     if bouton_appuyer == "AVANCER":
-        Avance = 1
         #arduinobus.write_byte(addrD, 81)
         #arduinobus.write_byte(addrG, 81)
         print("avance")   
 
     if bouton_appuyer == "RECULER":
-        Recule = 1
         #arduinobus.write_byte(addrD, 79)
         #arduinobus.write_byte(addrG, 79)
         print("recule")     
 
     if bouton_appuyer == "TOURNER GAUCHE":
-        Tourne_Gauche = 1
         #arduinobus.write_byte(addrD, 81)
         #arduinobus.write_byte(addrG, 79)
         print("tourne gauche")  
           
     if bouton_appuyer == "TOURNER DROITE":
-        Tourne_Droite = 1
         #arduinobus.write_byte(addrD, 79)
         #arduinobus.write_byte(addrG, 81)
         print("tourne droite")
