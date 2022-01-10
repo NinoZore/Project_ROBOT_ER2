@@ -63,7 +63,8 @@ def I2C_CODE():
     return jsonify(CODE_JS = CODE)
 
 def WEB():
-
+    global CODE
+    global bouton
     while True:
         print(bouton)
         print(CODE)
