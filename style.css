@@ -73,7 +73,8 @@ button{
 .feed_video{
 display: flex; 
 align-items: center;   
-background-color: green;
+background-image:url("no-signal.jpg");
+background-size: 100%;
 width: 100%;
 height: auto;    
 }
