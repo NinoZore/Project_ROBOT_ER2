@@ -7,7 +7,7 @@ addrD = 0x27 # addr de l'arduino(i2c)
 addrG = 0x25
 arduinobus = smbus.SMBus(1) # creation du bus i2c   
 recu = 0
-CODE = 0
+CODE = 69
 
 Avance = 0
 Recule = 0
@@ -61,7 +61,6 @@ def I2C_CODE():
 def WEB():
 
     while True:
-        CODE = bouton
         #arduinobus.write_byte(addr, 101)
         #time.sleep(0.5)
         #battery = arduinobus.read_byte(addr)
