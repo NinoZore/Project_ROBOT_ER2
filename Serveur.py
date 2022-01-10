@@ -40,7 +40,7 @@ def bouton():
         print("recule")     
 
     if bouton_appuyer == "TOURNER_GAUCHE":
-        "arduinobus.write_byte(addrD, 81)
+        #arduinobus.write_byte(addrD, 81)
         #arduinobus.write_byte(addrG, 79)
         print("tourne gauche")  
           
