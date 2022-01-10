@@ -65,6 +65,8 @@ def I2C_CODE():
 def WEB():
 
     while True:
+        print(bouton)
+        print(CODE)
         CODE = bouton
         #arduinobus.write_byte(addr, 101)
         #time.sleep(0.5)
