@@ -20,4 +20,4 @@ function bouton_parametre(variable){
 //oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 //oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
-setInterval(CODEI2C, 1000)
+setInterval(CODEI2C, 200)

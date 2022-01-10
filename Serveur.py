@@ -24,25 +24,25 @@ def bouton():
     if bouton_appuyer == "AVANCER":
         #arduinobus.write_byte(addrD, 81)
         #arduinobus.write_byte(addrG, 81)
-        code_recu = "avance"
+        code_recu = "CODE I2C GAUCHE = 81 et CODE I2C DROITE = 81"
         print("avance")   
 
     if bouton_appuyer == "RECULER":
         #arduinobus.write_byte(addrD, 79)
         #arduinobus.write_byte(addrG, 79)
-        code_recu = "recule"
+        code_recu = "CODE I2C GAUCHE = 79 et CODE I2C DROITE = 79"
         print("recule")     
 
     if bouton_appuyer == "TOURNER GAUCHE":
         #arduinobus.write_byte(addrD, 81)
         #arduinobus.write_byte(addrG, 79)
-        code_recu = "tourne gauche"
+        code_recu = "CODE I2C GAUCHE = 79 et CODE I2C DROITE = 81"
         print("tourne gauche")  
           
     if bouton_appuyer == "TOURNER DROITE":
         #arduinobus.write_byte(addrD, 79)
         #arduinobus.write_byte(addrG, 81)
-        code_recu = "tourne droite"
+        code_recu = "CODE I2C GAUCHE = 81 et CODE I2C DROITE = 79"
         print("tourne droite")
     return ("un truc")
 
@@ -59,7 +59,7 @@ def WEB():
         #arduinobus.write_byte(addr, 101)
         #time.sleep(0.5)
         #battery = arduinobus.read_byte(addr)
-        time.sleep(1)
+        time.sleep(0.2)
 
 threadWEB = threading.Thread(target=WEB)
 threadWEB.start()
