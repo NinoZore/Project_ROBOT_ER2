@@ -68,7 +68,7 @@ def bouton():
         print("tourne gauche")  
           
     if bouton_appuyer == "TOURNER DROITE":
-        if TournerDroite == 0
+        if TournerDroite == 0:
             #arduinobus.write_byte(addrD, 79)
             #arduinobus.write_byte(addrG, 81)
             code_recu = "CODE I2C GAUCHE = 81 et CODE I2C DROITE = 79"
