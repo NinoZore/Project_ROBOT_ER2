@@ -1,0 +1,38 @@
+html{
+    background-image: "wallpaper.gif";
+}
+.Bouton {/* MENU */
+    font-size: 400%;
+    border: 5px solid #505050;
+    text-align: center;
+    height: 100%;
+    padding: 5px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 15%;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    opacity: 75%;
+  }
+  
+  .Bouton:hover {
+    border: 5px solid #272727;
+  }
+  .entete{
+    text-align: center;
+  }
+  .soustitre{
+    text-align: center;
+  }
+  .video-container {
+    margin-left:220px; 
+    z-index:-1;
+    position: absolute;
+    top:0;
+    left:0;
+    }
+img#video {
+    position: fixed; right: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto; z-index: -100;
+    }
