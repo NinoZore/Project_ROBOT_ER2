@@ -25,27 +25,28 @@ def bouton():
     global Recule
     global Tourne_Gauche
     global Tourne_Droite
+    global bouton_appuyer
     print(request.get_json())
         
     bouton_appuyer = request.get_json()
     if bouton_appuyer == "AVANCER":
-        arduinobus.write_byte(addrD, 81)
-        arduinobus.write_byte(addrG, 81)
+        #arduinobus.write_byte(addrD, 81)
+        #arduinobus.write_byte(addrG, 81)
         print("avance")   
 
     if bouton_appuyer == "RECULER":
-        arduinobus.write_byte(addrD, 79)
-        arduinobus.write_byte(addrG, 79)
+        #arduinobus.write_byte(addrD, 79)
+        #arduinobus.write_byte(addrG, 79)
         print("recule")     
 
     if bouton_appuyer == "TOURNER_GAUCHE":
-        arduinobus.write_byte(addrD, 81)
-        arduinobus.write_byte(addrG, 79)
+        "arduinobus.write_byte(addrD, 81)
+        #arduinobus.write_byte(addrG, 79)
         print("tourne gauche")  
           
     if bouton_appuyer == "TOURNER DROITE":
-        arduinobus.write_byte(addrD, 79)
-        arduinobus.write_byte(addrG, 81)
+        #arduinobus.write_byte(addrD, 79)
+        #arduinobus.write_byte(addrG, 81)
         print("tourne droite")    
 
 @app.route("/code")#si on va sur /message on retourne le json { "message": "nouvelle valeur"}
@@ -56,6 +57,7 @@ def I2C_CODE():
 def WEB():
 
     while True:
+        CODE = bouton_appuyer
         #arduinobus.write_byte(addr, 101)
         #time.sleep(0.5)
         #battery = arduinobus.read_byte(addr)
