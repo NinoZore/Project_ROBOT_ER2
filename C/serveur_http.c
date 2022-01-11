@@ -37,7 +37,6 @@ int main()
 	char page_html[300];
 	char fichier_html[1500];
 	char version_http[100];
-	char test[]="journal.txt";
     FILE *Fichier;
   
     char find[100];
