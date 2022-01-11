@@ -13,8 +13,7 @@ int main(void)
     char CODE79[] = "79";
     
     Fichier = fopen(test, "r");
-    if (!Fichier)
-         printf("\aERREUR: Impossible d'ouvrir le fichier: %s.\n", test);
+    if (!Fichier)printf("\aERREUR: Impossible d'ouvrir le fichier: %s.\n", test);
     
 while (fgets(find,100,Fichier) != NULL)
     {
