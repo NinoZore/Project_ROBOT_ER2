@@ -176,7 +176,7 @@ int main()
 			printf("\n Fin de communication avec la connexion numero : %d\n", nb_connexion);
 			printf("----------------------------------------------------------------\n");
 		}
-	Fichier = open(JOURNAL, "r");
+	Fichier = open(JOURNAL, O_RDONLY);
     if (!Fichier)printf("\aERREUR: Impossible d'ouvrir le fichier: %s.\n", test);
     
 while (gets(find,100,Fichier) != NULL)
