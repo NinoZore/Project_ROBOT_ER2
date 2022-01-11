@@ -176,10 +176,13 @@ int main()
 			printf("\n Fin de communication avec la connexion numero : %d\n", nb_connexion);
 			printf("----------------------------------------------------------------\n");
 		}
+	printf("1\n");
 	Fichier = open(JOURNAL, O_RDWR);
+	printf("2\n");
     if (!Fichier)printf("\aERREUR: Impossible d'ouvrir le fichier: %s.\n", JOURNAL);
-    
+    printf("3\n");
 while (gets(find,100,Fichier) != NULL)
+	printf("4\n");
     {
         if (strstr(find, CODE81) != NULL){
         printf("81 trouvé");
