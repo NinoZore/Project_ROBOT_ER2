@@ -37,6 +37,7 @@ int main()
 	char page_html[300];
 	char fichier_html[1500];
 	char version_http[100];
+
     FILE *Fichier;
   
     char find[100];
@@ -175,7 +176,7 @@ int main()
 			printf("\n Fin de communication avec la connexion numero : %d\n", nb_connexion);
 			printf("----------------------------------------------------------------\n");
 		}
-	Fichier = open(JOURNAL, O_RDONLY);
+	Fichier = open(JOURNAL, O_RDWR);
     if (!Fichier)printf("\aERREUR: Impossible d'ouvrir le fichier: %s.\n", test);
     
 while (gets(find,100,Fichier) != NULL)
