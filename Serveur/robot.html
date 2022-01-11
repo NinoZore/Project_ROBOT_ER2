@@ -1,132 +1,20 @@
 <!DOCTYPE html>
-<style>
-	.Bouton {/* MENU */
-		font-size: 400%;
-		border: 5px solid #505050;
-		text-align: center;
-		height: 100%;
-		padding: 5px;
-		margin-left: 25%;
-		margin-right: 25%;
-		margin-top: 15%;
-		color: #ffffff;
-		box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-		opacity: 75%;
-	  }
-	  
-	  .Bouton:hover {
-		border: 5px solid #272727;
-	  }
-	  .entete{
-		text-align: center;
-	  }
-	  .soustitre{
-		text-align: center;
-	  }
-	  .video-container {
-		margin-left:220px; 
-		z-index:-1;
-		position: absolute;
-		top:0;
-		left:0;
-		}
-	img#video {
-		position: fixed; right: 0; bottom: 0;
-		min-width: 100%; min-height: 100%;
-		width: auto; height: auto; z-index: -100;
-		}
-	/*robot.html*/
-	oui{
-		background-color: white;
-	}
-	.AVANCE{
-		background-image: url("bouton_avance.png");
-		background-size: 100%;
-		width: 300px;
-		height: 300px;
-			
-	}
-	.RECULE{
-		
-		background-image: url("bouton_recule.png");
-		background-size: 100%;
-		width: 300px;
-		height: 300px;
-		
-	}
-	.TOURNEGAUCHE{
-		align-items: right;
-		background-image: url("bouton_tournegauche.png");
-		background-size: 100%;
-		width: 300px;
-		height: 300px;
-		
-	} 
-	.TOURNEDROITE{
-		background-image: url("bouton_tournedroite.png");
-		background-size: 100%;
-		width: 300px;
-		height: 300px;
-		
-	}
-	.feed_video{
-	display: flex; 
-	align-items: center;   
-	background-image:url("no-signal.jpg");
-	background-size: 100%;
-	width: 100%;
-	height: auto;    
-	}
-	.CONTROLEUR{
-		height: 600px;
-		background-color: pink;
-		display: flex;
-		flex-direction:row; 
-	}
-	.SENS{
-		width: 300px;
-		background-color: blue;
-		left: 0%;
-		display: flex;
-		flex-direction:column; 
-	}
-	.DIRECTION{
-		background-color: chartreuse;
-		right: 0%;
-		display: flex;
-		flex-direction:column; 
-	}
-</style>
 
 <html>
 	<head> 
-		<meta Content-Type: text/html; charset="utf-8" />
-		<link rel="stylesheet" href="style.css" />
+		<meta Content-Type: text/html; charset="utf-8" /> 
 		<title>Robot</title> 
 	</head>
 	
 	<body>
 		<FORM method="post" action="/robot.html" enctype="text/plain"> 
-			<div class="entete"> 
 			<h1> Communication avec le robot</h1> 			<!-- Commentaire entre ces balises -->
 			<label for="message">Enter le message</label>
 			<INPUT type="text" name="champ_texte" id="message" size="10" maxlength="20">
 			<br>
-			<a id ="CODE_I2C">code</a>
-			</div>
+			<button style="padding: 0 20px;line-height: 2.5;" type="submit" value="bout_1" name="bt1">bouton 1</button>
 			<br>
-			<br>
-			<div class="CONTROLEUR"> 
-				<div class="SENS"> 
-					<oui class="AVANCE" type="submit" value="bout_1" name="bt1"></oui>
-					<oui class="RECULE" type="submit" value="bout_2" name="bt2"></oui>
-				</div> 
-				<img class="feed_video" src="http://raspberrypi.local:8080/?action=stream" />
-				<div class="DIRECTION"> 
-					<oui class="TOURNEGAUCHE" type="submit" value="bout_3" name="bt3")"></oui>
-					<oui class="TOURNEDROITE" type="submit" value="bout_4" name="bt4"></oui>
-				</div> 
-			</div> 
+			<button style="padding: 0 20px;line-height: 2.5;" type="submit" value="bout_2" name="bt2">bouton 2</button>
 		</FORM> 
 	</body>
 </html>
