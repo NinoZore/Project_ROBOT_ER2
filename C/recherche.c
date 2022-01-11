@@ -33,6 +33,3 @@ while (fgets(find,100,Fichier) != NULL)
     fclose(Fichier);
     return 0;
 }
-
-
-

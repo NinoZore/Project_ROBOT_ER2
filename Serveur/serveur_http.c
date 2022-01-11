@@ -37,13 +37,6 @@ int main()
 	char page_html[300];
 	char fichier_html[1500];
 	char version_http[100];
-
-    FILE *Fichier;
-  	char test[]="journal.txt";
-    char find[100];
-    char CODE81[] = "81";
-    char CODE80[] = "80";
-    char CODE79[] = "79";
 	
 	
 	
@@ -176,27 +169,6 @@ int main()
 			printf("\n Fin de communication avec la connexion numero : %d\n", nb_connexion);
 			printf("----------------------------------------------------------------\n");
 		}
-	printf("1\n");
-	Fichier = fopen(&test, "r+");
-	printf("2\n");
-    if (!Fichier)printf("\aERREUR: Impossible d'ouvrir le fichier: %s.\n", JOURNAL);
-    printf("3\n");
-	while (fgets(find,100,Fichier) != NULL){
-		printf("4\n");
-			if (strstr(find, CODE81) != NULL){
-			printf("81 trouvé");
-
-		}
-			if (strstr(find, CODE80) != NULL){
-			printf("80 trouvé");
-
-		}
-			if (strstr(find, CODE79) != NULL){
-			printf("79 trouvé");
-
-		}
-	  fclose(Fichier);
-    }
 	}
 	
 	close(sock_ecoute);  	// jamais atteint !!!!
@@ -284,6 +256,10 @@ int Recherche_Requete_GET(const char *Message, char *page_html, char *version_ht
 	return -1; // Commande non trouvée
 }
 //------------------------------------------------------------------------
+
+
+
+
 
 
 
