@@ -34,6 +34,9 @@ def bouton():
             #arduinobus.write_byte(addrG, 81)
             code_recu = "CODE I2C GAUCHE = 81 et CODE I2C DROITE = 81"
             Avancer = 1
+            Reculer = 0
+            TournerDroite = 0
+            TournerGauche = 0
         else :
             #arduinobus.write_byte(addrD, 80)
             #arduinobus.write_byte(addrG, 80)
@@ -47,6 +50,9 @@ def bouton():
             #arduinobus.write_byte(addrG, 79)
             code_recu = "CODE I2C GAUCHE = 79 et CODE I2C DROITE = 79"
             Reculer = 1
+            Avancer = 0
+            TournerDroite = 0
+            TournerGauche = 0
         else :
             #arduinobus.write_byte(addrD, 80)
             #arduinobus.write_byte(addrG, 80)
@@ -60,6 +66,9 @@ def bouton():
             #arduinobus.write_byte(addrG, 79)
             code_recu = "CODE I2C GAUCHE = 79 et CODE I2C DROITE = 81"
             TournerGauche = 1
+            TournerDroite = 0
+            Avancer = 0
+            Reculer = 0
         else :
             #arduinobus.write_byte(addrD, 80)
             #arduinobus.write_byte(addrG, 80)
@@ -73,6 +82,9 @@ def bouton():
             #arduinobus.write_byte(addrG, 81)
             code_recu = "CODE I2C GAUCHE = 81 et CODE I2C DROITE = 79"
             TournerDroite = 1
+            Avancer = 0
+            TournerGauche = 0
+            Reculer = 0
         else:
             #arduinobus.write_byte(addrD, 80)
             #arduinobus.write_byte(addrG, 80)
