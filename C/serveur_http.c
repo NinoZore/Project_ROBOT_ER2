@@ -37,13 +37,6 @@ int main()
 	char page_html[300];
 	char fichier_html[1500];
 	char version_http[100];
-
-    int Fichier;
-  
-    char find[100];
-    char CODE81[] = "81";
-    char CODE80[] = "80";
-    char CODE79[] = "79";
 	
 	
 	
