@@ -38,7 +38,7 @@ int main()
 	char fichier_html[1500];
 	char version_http[100];
 
-    FILE *Fichier;
+    int Fichier;
   
     char find[100];
     char CODE81[] = "81";
@@ -177,7 +177,7 @@ int main()
 			printf("----------------------------------------------------------------\n");
 		}
 	Fichier = open(JOURNAL, O_RDWR);
-    if (!Fichier)printf("\aERREUR: Impossible d'ouvrir le fichier: %s.\n", test);
+    if (!Fichier)printf("\aERREUR: Impossible d'ouvrir le fichier: %s.\n", JOURNAL);
     
 while (gets(find,100,Fichier) != NULL)
     {
