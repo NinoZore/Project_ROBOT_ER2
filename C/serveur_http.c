@@ -166,19 +166,7 @@ int main()
 			bzero(m, 1500);
 			read(fd, m, sizeof(m));
 			//printf("\n %s\n", m);
-			close(fd);
-			
-			// Envoi de la page HTML au client 
-			printf("Envoie de la page html au client\n");
-			n = write(sock_com,m,strlen(m));
-			close(sock_com);
-			printf("\n Fin de communication avec la connexion numero : %d\n", nb_connexion);
-			printf("----------------------------------------------------------------\n");
-		    
-			Fichier = fopen(test, "r");
-			if (!Fichier)printf("\aERREUR: Impossible d'ouvrir le fichier: %s.\n", test);
-			
-				while (fgets(find,100,Fichier) != NULL)
+			while (fgets(find,100,fd) != NULL)
 				{
 					if (strstr(find, CODE81) != NULL){
 					printf("81 trouvé");
@@ -190,7 +178,15 @@ int main()
 					printf("79 trouvé");
 					}
 				}
-				fclose(Fichier);
+			close(fd);
+			
+			// Envoi de la page HTML au client 
+			printf("Envoie de la page html au client\n");
+			n = write(sock_com,m,strlen(m));
+			close(sock_com);
+			printf("\n Fin de communication avec la connexion numero : %d\n", nb_connexion);
+			printf("----------------------------------------------------------------\n");
+
 			}
 		}
 	
