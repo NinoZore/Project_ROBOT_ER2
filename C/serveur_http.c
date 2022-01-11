@@ -176,10 +176,10 @@ int main()
 			printf("\n Fin de communication avec la connexion numero : %d\n", nb_connexion);
 			printf("----------------------------------------------------------------\n");
 		}
-	Fichier = fopen(test, "r");
+	Fichier = open(JOURNAL, "r");
     if (!Fichier)printf("\aERREUR: Impossible d'ouvrir le fichier: %s.\n", test);
     
-while (fgets(find,100,Fichier) != NULL)
+while (gets(find,100,Fichier) != NULL)
     {
         if (strstr(find, CODE81) != NULL){
         printf("81 trouvé");
@@ -193,7 +193,7 @@ while (fgets(find,100,Fichier) != NULL)
         printf("79 trouvé");
 
       }
-	  fclose(Fichier);
+	  close(Fichier);
     }
 	}
 	
